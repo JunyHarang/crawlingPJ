@@ -17,7 +17,7 @@ matplotlib.rcParams['axes.unicode_minus'] = False
 plt.rcParams["font.family"] = 'NanumGothic'
 
 # CSV 불러오기
-csvFile = '/home/junyharang/pythonPJ/202161_tiobe_Total.csv'
+csvFile = '/home/junyharang/pythonPJ/tiobe/202161_tiobe_Total.csv'
 thisFrame = pd.read_csv(csvFile, encoding='utf-8')
 
 print(thisFrame.info())
@@ -31,11 +31,20 @@ userate = thisFrame.sort_values(by='이용률', axis=0, ascending=True)['이용�
 
 thisColor = ['r', 'b', 'g', 'c', 'm', 'y', 'lime', 'turquoise', 'lightseagreen', 'darkblue', 'royalblue', 'blueviolet', 'darkorchid', 'violet', 'purple', 'tomato', 'brown', 'orange', 'greenyellow', 'aqua', 'slategrey']
 
+
+        
+
 # barh 그래프
 plt.figure(figsize=(15,15))
 plt.title('2021 Language Ranking')
-plt.barh(langName, userate, height= -0.5, align='edge', color=thisColor, 
-        edgecolor="gray", linewidth=1, tick_label=langName, log=False)
+
+
+
+ax = plt.barh(langName, height= -0.5, align='edge', color=thisColor, edgecolor="gray", linewidth=1, tick_label=langName, log=False)
+
+for p in ax.patches:
+    x, y, width, height = p.get_bbox().bounds
+    ax.text(width*1.01, y+height/2, "%.1f %%"%(width), va='center')
 
 plt.gca().xaxis.set_major_formatter(mtick.FormatStrFormatter('%.2f'))
 plt.xlim(0, 13.5)
