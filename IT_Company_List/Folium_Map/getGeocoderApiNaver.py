@@ -4,7 +4,7 @@ import folium, requests
 import pandas as pd
 
 urlHeader = 'https://dapi.kakao.com/v2/local/search/address.json?query='
-apiKey = 'b78634f74383cec67bf8cd217efb7bef'
+apiKey = '[카카오 개발자 API]'
 header = {'Authorization' : 'KakaoAK ' + apiKey}
 
 csvFile = '/home/junyharang/pythonPJ/IT_Company_List/IT_Company_info.csv'
