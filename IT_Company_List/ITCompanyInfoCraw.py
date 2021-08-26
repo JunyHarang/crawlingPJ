@@ -299,14 +299,14 @@ companyInfo_dict_List = [
 
 print(companyInfo_dict_List)
 
-naverFram = DataFrame(companyInfo_dict_List, columns=['번호', '회사명', '본사 위치'])
+companyFram = DataFrame(companyInfo_dict_List, columns=['번호', '회사명', '본사 위치'])
 
-print(naverFram)
+print(companyFram)
 print('=' * 100)
 
 fileName = 'IT_Company_info.csv'
 
-naverFram.to_csv(fileName, encoding='utf-8', index=True)
+companyFram.to_csv(fileName, encoding='utf-8', index=True)
 
 
 
