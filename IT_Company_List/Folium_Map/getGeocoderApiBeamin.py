@@ -53,7 +53,7 @@ foliMap = folium.Map(location=[latitude, longitude], zoom_start=17)
 baeminrIcon = folium.Icon(color='green', icon='info-sign')
 baeminiframe = folium.IFrame(width=300, height=300)
 baeminpopup = folium.Popup(naveriframe, max_width=650)
-folium.Marker([latitude, longitude], popup=naverpopup, tooltip=companyInfo, icon=naverIcon).add_to(foliMap)
+folium.Marker([latitude, longitude], popup=baeminpopup, tooltip=companyInfo, icon=naverIcon).add_to(foliMap)
 
 # CircleMarker를 통해 지도 상에 기준점 반경을 나타낸다.
 folium.CircleMarker([latitude, longitude], radius=300, color='green', fill_color='yellow', fill=False, popup=companyInfo).add_to(foliMap)
