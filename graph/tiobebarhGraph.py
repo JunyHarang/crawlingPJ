@@ -29,7 +29,8 @@ langName = thisFrame.sort_values(by='이용률', axis=0, ascending=True)['언어
 userate = thisFrame.sort_values(by='이용률', axis=0, ascending=True)['이용률']
 
 
-thisColor = ['r', 'b', 'g', 'c', 'm', 'y', 'lime', 'turquoise', 'lightseagreen', 'darkblue', 'royalblue', 'blueviolet', 'darkorchid', 'violet', 'purple', 'tomato', 'brown', 'orange', 'greenyellow', 'aqua', 'slategrey']
+thisColor = ['r', 'b', 'g', 'c', 'm', 'y', 'lime', 'turquoise', 'lightseagreen', 'darkblue', 'royalblue', 'blueviolet', 'darkorchid', 'violet', 'purple', 'tomato', 'brown', 
+             'orange', 'greenyellow', 'aqua', 'slategrey']
 
 
         
