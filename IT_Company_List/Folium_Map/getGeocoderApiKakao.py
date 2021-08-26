@@ -50,10 +50,10 @@ print("경도 : ", longitude)
 
 companyInfo = 'Kakao', str(address)
 foliMap = folium.Map(location=[latitude, longitude], zoom_start=17)
-naverIcon = folium.Icon(color='green', icon='info-sign')
-naveriframe = folium.IFrame(width=300, height=300)
-naverpopup = folium.Popup(naveriframe, max_width=650)
-folium.Marker([latitude, longitude], popup=naverpopup, tooltip=companyInfo, icon=naverIcon).add_to(foliMap)
+kakaoIcon = folium.Icon(color='green', icon='info-sign')
+kakaoiframe = folium.IFrame(width=300, height=300)
+kakaopopup = folium.Popup(kakaoiframe, max_width=650)
+folium.Marker([latitude, longitude], popup=kakaopopup, tooltip=companyInfo, icon=naverIcon).add_to(foliMap)
 
 # CircleMarker를 통해 지도 상에 기준점 반경을 나타낸다.
 folium.CircleMarker([latitude, longitude], radius=300, color='green', fill_color='yellow', fill=False, popup=companyInfo).add_to(foliMap)
